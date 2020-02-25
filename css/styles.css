@@ -1,0 +1,6 @@
+#body {
+  background-color: #ffffff;
+  background-image: url('../img/subtle-prism.svg');
+  background-attachment: fixed;
+  background-size: cover;
+}
