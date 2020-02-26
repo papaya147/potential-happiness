@@ -1,6 +1,12 @@
 #body {
   background-color: #ffffff;
-  background-image: url('../img/subtle-prism.svg');
+  background-image: url("../img/subtle-prism.svg");
   background-attachment: fixed;
   background-size: cover;
+}
+
+.del-rotate {
+  transform: rotate(90deg) translateY(30px);
+  width: 150px;
+  transform-origin: 0% 0%;
 }
