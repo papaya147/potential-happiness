@@ -8,18 +8,8 @@ class App extends React.Component {
 
   addPara = () => {
     this.setState({
-      paras: [
-        ...this.state.paras,
-        <Paragraph id={this.state.count++} remove={this.removePara} />
-      ]
+      paras: [...this.state.paras, <Paragraph id={this.state.count++} />]
     });
-  };
-
-  removePara = index => {
-    let array = [...this.state.paras];
-    //Write loop to delete properly
-    array.splice(index, 1);
-    this.setState({ paras: array });
   };
 
   render() {
@@ -29,7 +19,7 @@ class App extends React.Component {
         <div className="btn btn-warning" id="add" onClick={this.addPara}>
           Add Paragraph
         </div>
-        <div name="count">{this.state.count}</div>
+        <input name="count" hidden value={this.state.count}></input>
       </div>
     );
   }
