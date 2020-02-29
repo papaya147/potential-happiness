@@ -7,7 +7,11 @@ $file_name = $_POST['title'];
 $count = $_POST['count'];
 
 $path = "../articles/" . $_SESSION['user'] . "/";
-mkdir($path);
+try {
+    mkdir($path);
+} catch (Exception $e) {
+}
+
 $file = fopen($path . $file_name . ".html", "a");
 
 $head = '
@@ -19,10 +23,11 @@ $head = '
         <link rel="stylesheet" type="text/css" href=".../bootstrap/css/bootstrap.min.css">
     </head>
     <body>
+        <div align="center">
 ';
 fwrite($file, $head);
 
-$file_name = '<div class="topic">' . $file_name . '</div>';
+$file_name = '<h2 class="topic">' . $file_name . '</h2>';
 fwrite($file, $file_name);
 
 $var = 0;
@@ -36,6 +41,6 @@ while ($var < $count) {
     $var++;
 }
 
-fwrite($file, "</body></html>");
+fwrite($file, "</div></body></html>");
 
 fclose($file);
