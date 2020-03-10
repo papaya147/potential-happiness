@@ -19,8 +19,8 @@ $head = '
     <head>
         <link rel="stylesheet" type="text/css" href="../articles/css/styles.css">
         <link rel="stylesheet" type="text/css" href="../css/styles.css">
-        <script src=".../bootstrap/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href=".../bootstrap/css/bootstrap.min.css">
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
     </head>
     <body>
         <div align="center">
